@@ -1,5 +1,14 @@
 #!/usr/bin/env ruby
 
+board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+
 require_relative '../lib/move.rb'
 
 # Code your CLI Here
+puts greet
+puts display_board(board)
+puts "Please Pick a Number from 1 - 9 to move!"
+input = gets.strip
+input_to_index(input)
+puts move(board, 0, "X")
+puts display_board(board)
